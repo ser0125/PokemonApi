@@ -1,0 +1,18 @@
+.navbar-header {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 8px 16px;
+    background: #d60e33;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.pokeball-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
