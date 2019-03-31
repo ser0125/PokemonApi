@@ -1,3 +1,8 @@
-<p>
-  pokemon-list works!
-</p>
+<div class="list-container" *ngIf="pokemons">
+<mat-card class="example-card" *ngFor="let pokemon of pokemons; let id=index">
+  <img class="pokemon-image" mat-card-image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id+1}}.png" alt="Foto de un pokemon">
+<mat-card-footer>
+  <mat-card-title>{{pokemon.name}}</mat-card-title>
+</mat-card-footer>
+</mat-card>
+</div>
