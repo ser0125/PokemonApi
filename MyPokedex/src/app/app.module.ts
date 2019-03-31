@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatDialogModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { PokeApiService } from './services/pokeapi.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { PokemonDetailComponent } from './components/pokemon/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NavbarComponent,
     HomeComponent,
     PokemonListComponent,
+    PokemonDetailComponent,
     P404Component,
   ],
   imports: [
@@ -28,9 +30,11 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MatCheckboxModule,
     AppRoutingModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatDialogModule
   ],
   providers: [PokeApiService],
+  entryComponents: [PokemonDetailComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
