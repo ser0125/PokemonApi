@@ -8,7 +8,7 @@ export class PokeApiService {
     constructor (private http: HttpClient) {
     }
 
-    getPokemons() {
-       return this.http.get(`${this.baseURL}/pokemon`);
+    getPokemons(offset: number) {
+       return this.http.get(`${this.baseURL}/pokemon?offset=${offset}`);
     }
 }

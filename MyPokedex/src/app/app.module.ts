@@ -10,6 +10,7 @@ import { P404Component } from './components/error/p404/p404.component';
 import { AppRoutingModule } from './app.routing.module';
 import { PokeApiService } from './services/pokeapi.service';
 import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatCheckboxModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [PokeApiService],
   bootstrap: [AppComponent]
