@@ -52,5 +52,8 @@ import { PokeApiService } from 'src/app/services/pokeapi.service';
             break;
           }
         })
+        this.levelUpMovement.sort((a,b) => {
+          return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at;
+        });
       }
   }
