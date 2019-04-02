@@ -27,6 +27,8 @@ span {
 }
 
 .progress-bar {
+    color: white;
+    text-align: center;
   background-color: #17a2b8;
 }
 
@@ -38,7 +40,12 @@ span {
   padding: 10px;
   color: white
 }
-
+.pokemon-detail-move-title {
+    background-color: #d60e33;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+}
 .pokemon-stats-row {
   display: flex;
   margin-bottom: 5px;
@@ -52,6 +59,7 @@ span {
 .pokemon-detail-sprite {
   width: 135px;
   height: 135px;
+  margin-right: 10px;
 }
 
 .pokemon-types {
@@ -60,6 +68,37 @@ span {
   font-weight: 600;
   border-radius: 2px;
   padding: 1px 10px 5px;
+}
+/deep/ .mat-dialog-content {
+    overflow: visible;
+}
+.pokemon-moves-row {
+    display: flex;
+    padding: 5px;
+}
+.pokemon-moves-header {
+    font-weight: bold;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0;
+    background-color: #17a2b8;
+    border: 1px solid #effdff;
+    border-radius: 5px;
+    padding: 2px;
+}
+.pokemon-move-info {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #ededed;
+}
+.pokemon-move {
+    flex-grow: 7;
+}
+.pokemon-move-level {
+    text-align: center;
+}
+.pokemon-detail-movements {
+    text-align: left;
 }
 
 .pokemon-color {

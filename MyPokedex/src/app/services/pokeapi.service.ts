@@ -14,4 +14,7 @@ export class PokeApiService {
     getPokemonById(id: number) {
         return this.http.get(`${this.baseURL}/pokemon/${id}`);
      }
+     getPokemonEffectiveness(type: number) {
+      return this.http.get(`${this.baseURL}/pokemon/${type}`);
+   }
 }

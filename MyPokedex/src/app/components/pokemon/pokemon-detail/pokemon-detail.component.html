@@ -1,19 +1,55 @@
-<div class="alert-container" *ngIf="pokemonData!=undefined">
-  <h1 class="pokemon-detail-title">{{pokemonData.name | titlecase }}</h1>
-  <div class="pokemon-general-detail">
-    <img class="pokemon-detail-sprite" src="{{pokemonData.sprites.front_default}}" alt="" srcset="">
-    <div class="pokemon-specific-info">
-    <span *ngFor="let infoType of pokemonData.types" class="pokemon-types pokemon-color-{{infoType.type.name}}">{{infoType.type.name | titlecase }}</span>
-    <div class="pokemon-detail-stats">
-      <div class="pokemon-stats-row" *ngFor="let statInfo of pokemonData.stats.slice().reverse()">
-        <span class="pokemon-stat-name">{{statInfo.stat.name | titlecase }}</span>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" 
-            aria-valuenow="45" aria-valuemin="0" aria-valuemax="200"
-            [ngStyle]="{'width': getPercentage(statInfo.base_stat)}">{{statInfo.base_stat}}</div>
+<mat-dialog-content>
+  <div class="alert-container" *ngIf="pokemonData!=undefined">
+    <h1 class="pokemon-detail-title">{{pokemonData.name | titlecase }}</h1>
+    <div class="pokemon-general-detail">
+      <img class="pokemon-detail-sprite" src="{{pokemonData.sprites.front_default}}" alt="" srcset="">
+      <div class="pokemon-specific-info">
+        <span *ngFor="let infoType of pokemonData.types"
+          class="pokemon-types pokemon-color-{{infoType.type.name}}">{{infoType.type.name | titlecase }}</span>
+        <div class="pokemon-detail-stats">
+          <div class="pokemon-stats-row" *ngFor="let statInfo of pokemonData.stats.slice().reverse()">
+            <span class="pokemon-stat-name">{{statInfo.stat.name | titlecase }}</span>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="200"
+                [ngStyle]="{'width': getPercentage(statInfo.base_stat)}">{{statInfo.base_stat}}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div>
+    <div class="pokemon-detail-movements">
+    <h1 class="pokemon-detail-move-title">Moves</h1>
+    <h3>Level-up Moves</h3>
+    <div class="pokemon-moves-row">
+      <h4 class="pokemon-moves-header">Level</h4>
+      <h4 class="pokemon-moves-header pokemon-move">Move</h4>
+    </div>
+    <div class="pokemon-moves-row" *ngFor="let infoMove of levelUpMovement">
+      <span class="pokemon-move-info pokemon-move-level">{{infoMove.version_group_details[0].level_learned_at}}</span>
+      <span class="pokemon-move-info pokemon-move">{{infoMove.move.name}}</span>
+    </div>
+    <h3>Machine Moves</h3>
+    <div class="pokemon-moves-row">
+      <h4 class="pokemon-moves-header pokemon-move">Move</h4>
+    </div>
+    <div class="pokemon-moves-row" *ngFor="let infoMove of machineMovement">
+      <span class="pokemon-move-info">{{infoMove.move.name}}</span>
+    </div>
+  <h3>Tutor Moves</h3>
+    <div class="pokemon-moves-row">
+      <h4 class="pokemon-moves-header pokemon-move">Move</h4>
+    </div>
+    <div class="pokemon-moves-row" *ngFor="let infoMove of tutorMovement">
+      <span class="pokemon-move-info">{{infoMove.move.name}}</span>
+    </div>
+    <h3>Egg Moves</h3>
+    <div class="pokemon-moves-row">
+      <h4 class="pokemon-moves-header pokemon-move">Move</h4>
+    </div>
+    <div class="pokemon-moves-row" *ngFor="let infoMove of eggMovement">
+      <span class="pokemon-move-info">{{infoMove.move.name}}</span>
+    </div>
   </div>
 </div>
+</mat-dialog-content>
