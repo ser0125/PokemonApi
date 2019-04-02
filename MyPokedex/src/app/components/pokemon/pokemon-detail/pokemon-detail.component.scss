@@ -1,0 +1,45 @@
+.alert-container {
+    text-align: center;
+}
+.pokemon-general-detail {
+    display: flex;
+    align-items: center;
+}
+span {
+    margin-right: 5px;
+}
+.pokemon-specific-info {
+    text-align: left;
+    flex-grow: 1;
+}
+.pokemon-detail-stats {
+    margin-top: 16px;
+}
+.progress {
+    background-color: #ededed;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.progress-bar {
+    background-color: #17a2b8;
+}
+.pokemon-detail-title {
+    margin-top: -24px;
+    margin-left: -24px;
+    margin-right: -24px;
+    background-color: #d60e33;
+    padding: 10px;
+    color: white
+}
+.pokemon-stats-row {
+    display: flex;
+    margin-bottom: 5px;
+}
+.pokemon-stat-name {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.pokemon-detail-sprite {
+    width: 135px;
+    height: 135px;
+}

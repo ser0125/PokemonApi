@@ -11,4 +11,7 @@ export class PokeApiService {
     getPokemons(offset: number) {
        return this.http.get(`${this.baseURL}/pokemon?offset=${offset}`);
     }
+    getPokemonById(id: number) {
+        return this.http.get(`${this.baseURL}/pokemon/${id}`);
+     }
 }

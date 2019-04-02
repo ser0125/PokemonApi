@@ -40,26 +40,17 @@ export class PokemonListComponent implements OnInit {
     return pokemon.slice(34,-1);
   }
 
-  getPokemonDetail() {
-    var dialogRef = this.openDialog('¿Estas seguro que desea cerrar la sesión?', '',
-    true, 'NO, CONTINUAR');
+  getPokemonDetail(pokemonUrl:string) {
+    this.openDialog(pokemonUrl);
   }
 
   
-  openDialog(messageParam,
-    titleParam='',
-    btnSecondParam = false,
-    btnSecondTextParam = 'Cancelar',
-    btnFirstTextParam = 'Aceptar'): any {
+  openDialog(pokemonUrl: string): any {
+    let pokemonId: string = this.searchId(pokemonUrl);
     this.dialog.open(PokemonDetailComponent, {
-      maxWidth:'450px',
-      disableClose: true,
+      width:'500px',
       data: {
-        title: titleParam,
-        message: messageParam,
-        btnSecond: btnSecondParam,
-        btnSecondText: btnSecondTextParam,
-        btnFirstText: btnFirstTextParam
+        pokemonId
       }
     });
   }
