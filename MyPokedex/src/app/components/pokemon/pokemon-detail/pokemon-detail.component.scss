@@ -1,45 +1,155 @@
 .alert-container {
-    text-align: center;
+  text-align: center;
 }
+
 .pokemon-general-detail {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 span {
-    margin-right: 5px;
+  margin-right: 5px;
 }
+
 .pokemon-specific-info {
-    text-align: left;
-    flex-grow: 1;
+  text-align: left;
+  flex-grow: 1;
 }
+
 .pokemon-detail-stats {
-    margin-top: 16px;
+  margin-top: 16px;
 }
+
 .progress {
-    background-color: #ededed;
-    flex-grow: 1;
-    flex-basis: 0;
+  background-color: #ededed;
+  flex-grow: 1;
+  flex-basis: 0;
 }
+
 .progress-bar {
-    background-color: #17a2b8;
+  background-color: #17a2b8;
 }
+
 .pokemon-detail-title {
-    margin-top: -24px;
-    margin-left: -24px;
-    margin-right: -24px;
-    background-color: #d60e33;
-    padding: 10px;
-    color: white
+  margin-top: -24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  background-color: #d60e33;
+  padding: 10px;
+  color: white
 }
+
 .pokemon-stats-row {
-    display: flex;
-    margin-bottom: 5px;
+  display: flex;
+  margin-bottom: 5px;
 }
+
 .pokemon-stat-name {
-    flex-grow: 1;
-    flex-basis: 0;
+  flex-grow: 1;
+  flex-basis: 0;
 }
+
 .pokemon-detail-sprite {
-    width: 135px;
-    height: 135px;
+  width: 135px;
+  height: 135px;
+}
+
+.pokemon-types {
+  color: white;
+  font-variant: small-caps;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 1px 10px 5px;
+}
+
+.pokemon-color {
+  &-poison {
+    border: 1px solid rgb(200, 116, 200);
+    background: rgb(146, 58, 146);
+  }
+
+  &-grass {
+    border: 1px solid rgb(186, 227, 166);
+    background: rgb(105, 194, 61);
+  }
+
+  &-fire {
+    border: 1px solid rgb(247, 191, 151);
+    background: rgb(237, 109, 18);
+  }
+
+  &-flying {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(142, 111, 235);
+  }
+
+  &-water {
+    border: 1px solid rgb(227, 235, 252);
+    background: rgb(69, 120, 237);
+  }
+
+  &-bug {
+    border: 1px solid rgb(209, 224, 77);
+    background: rgb(151, 165, 29);
+  }
+
+  &-normal {
+    border: 1px solid rgb(211, 211, 187);
+    background: rgb(156, 156, 99);
+  }
+
+  &-electric {
+    border: 1px solid rgb(252, 234, 161);
+    background: rgb(246, 201, 19);
+  }
+
+  &-ground {
+    border: 1px solid rgb(246, 237, 213);
+    background: rgb(219, 181, 77);
+  }
+
+  &-fairy {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(232, 120, 144);
+  }
+
+  &-fighting {
+    border: 1px solid rgb(223, 105, 98);
+    background: rgb(174, 42, 36);
+  }
+  
+  &-psychic {
+    border: 1px solid rgb(253, 216, 227);
+    background: rgb(247, 54, 112);
+  }
+
+  &-steel {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(160, 160, 192);
+  }
+
+  &-rock {
+    border: 1px solid rgb(214, 197, 122);
+    background: rgb(164, 143, 50);
+  }
+
+  &-ice {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(126, 206, 206);
+  }
+
+  &-dragon {
+    border: 1px solid rgb(199, 176, 252);
+    background: rgb(94, 29, 247);
+  }
+
+  &-ghost {
+    border: 1px solid rgb(163, 145, 192);
+    background: rgb(100, 78, 136);
+  }
+
+  &-dark {
+    border: 1px solid rgb(156, 122, 99);
+    background: rgb(100, 78, 64);
+  }
 }
